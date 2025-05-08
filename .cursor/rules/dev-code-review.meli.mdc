@@ -1,0 +1,87 @@
+---
+description: When ask to perform a code review
+globs: 
+alwaysApply: false
+---
+---
+description: Guidelines for professional code review and report generation
+globs: ["*"]
+alwaysApply: true
+---
+
+# Rules for Professional Code Review
+
+## Initial Steps
+
+- When requested to perform a code review, automatically fetch the diff between branches
+- Execute `git diff` between the appropriate branches to obtain changeset
+- Analyze code changes systematically, focusing on modified files one by one
+- Create a new markdown report file in the `.notes/code-review` folder
+
+## Report Generation
+
+1. **File Structure**
+   - Create reports in the `.notes/code-review` folder
+   - Use the following naming convention: `YYYY-MM-DD-branch-name-review.md`
+   - Example: `2024-03-21-feature-dynamic-layout-review.md`
+
+2. **Report Format**
+   ```markdown
+   # Code Review: [Branch Name]
+   
+   **Branch Base**: [Nome da Branch Base]
+   **Feature Branch**: [Nome da Feature Branch]
+   
+   ## Análise Geral
+   
+   [Visão geral das mudanças e seu impacto no sistema]
+   
+   ## Problemas Críticos
+   
+   [Lista de problemas que precisam ser resolvidos antes do merge]
+   
+   ## Sugestões de Melhoria
+   
+   [Lista de sugestões para melhorar o código, mas que não bloqueiam o merge]
+   
+   ## Análise por Arquivo
+   
+   ### [Nome do Arquivo 1]
+   
+   **Linha(s)**: XX-YY
+   - 🚨 **Problema**: [Descrição]
+   - ✨ **Sugestão**: [Solução proposta]
+   - 📝 **Impacto**: [Explicação do impacto]
+   
+   ### [Nome do Arquivo 2]
+   ...
+   
+   ## Conclusão
+   
+   [Resumo final e recomendação: aprovar, aprovar com modificações ou reprovar]
+   ```
+
+3. **Categorização de Feedback**
+   - 🚨 Crítico: Problemas que precisam ser resolvidos
+   - ⚠️ Importante: Melhorias significativas recomendadas
+   - 💡 Sugestão: Melhorias opcionais
+   - ✅ Positivo: Aspectos bem implementados
+
+## PR Description Generation
+
+- When requested to generate a PR description from a code review:
+  - Create a new markdown file in the `.notes/pr-description` folder
+  - Follow the same naming convention used for code review files
+  - Example: if the code review file is `2024-03-21-feature-dynamic-layout-review.md`, the PR description will be `2024-03-21-feature-dynamic-layout-review.md`
+  - Convert the code review findings into a structured PR description
+
+## Review Output Format
+
+- Write reviews in Brazilian Portuguese
+- Keep technical terms and programming concepts in English (such as "hooks", "components", "state", "props", etc.)
+- Maintain error messages or system logs in their original language (English)
+- Use precise technical vocabulary while maintaining clarity for Brazilian developers
+- Generate a markdown report in the `.notes/code-review` folder following the specified format
+- Use clear headings to separate review sections
+- Use consistent terminology throughout reviews
+- Format feedback as inline comments on the affected files to facilitate understanding and easy copying to GitHub
