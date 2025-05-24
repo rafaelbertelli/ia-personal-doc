@@ -11,7 +11,7 @@
 - 🎨 Interface moderna e responsiva
 
 [GitHub](https://github.com/rafaelbertelli/ia-personal-doc/)
-[Começar](#personal-documentation)
+[Começar](#o-que-é-este-projeto)
 
 <!-- background color -->
 

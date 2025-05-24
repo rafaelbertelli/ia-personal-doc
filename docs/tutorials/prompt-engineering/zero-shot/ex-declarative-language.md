@@ -3,3 +3,5 @@
 Print da resposta do GPT-4o-mini com a linguagem declarativa e orientada à tarefa.
 
 ![Diferença de respostas](./assets/gpt-4o-mini-diferenca-de-respostas.png)
+
+[Voltar](/tutorials/prompt-engineering/zero-shot/README?id=linguagem-declarativa-e-orientada-à-tarefa)

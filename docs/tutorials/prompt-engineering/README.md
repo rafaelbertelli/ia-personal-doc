@@ -1,4 +1,4 @@
-# IA - Tipos de prompt e variações
+# Tipos de prompt e variações
 
 Existem diversas categorias e técnicas de prompts que podem ser utilizadas para otimizar as interações com IAs.
 
