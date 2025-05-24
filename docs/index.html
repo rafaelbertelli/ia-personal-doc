@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Personal Documentation</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="description" content="Personal documentation site" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, minimum-scale=1.0"
+    />
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="_media/favicon.svg" />
+    <link rel="alternate icon" href="_media/favicon.svg" />
+    <link rel="shortcut icon" href="_media/favicon.svg" />
+    <link
+      rel="stylesheet"
+      href="//cdn.jsdelivr.net/npm/docsify@4/lib/themes/vue.css"
+    />
+  </head>
+  <body>
+    <div id="app"></div>
+    <script>
+      window.$docsify = {
+        name: "IA Personal Documentation",
+        repo: "https://github.com/rafaelbertelli/ia-personal-doc",
+        loadSidebar: true,
+        autoHeader: true,
+        subMaxLevel: 2,
+        coverpage: true,
+        onlyCover: false,
+        search: {
+          maxAge: 86400000,
+          paths: "auto",
+          placeholder: "Pesquisar (Ctrl+K ou Cmd+K)",
+          noData: "Nenhum resultado encontrado!",
+          depth: 2,
+          hideOtherSidebarContent: false,
+        },
+      };
+    </script>
+    <!-- Docsify v4 -->
+    <script src="//cdn.jsdelivr.net/npm/docsify@4"></script>
+    <!-- Search plugin -->
+    <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/search.min.js"></script>
+    <!-- Copy to clipboard -->
+    <script src="//cdn.jsdelivr.net/npm/docsify-copy-code/dist/docsify-copy-code.min.js"></script>
+    <!-- Zoom image -->
+    <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/zoom-image.min.js"></script>
+
+    <!-- Custom keyboard shortcut for search -->
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        // Wait for docsify to load
+        setTimeout(function () {
+          document.addEventListener("keydown", function (e) {
+            // Check for Ctrl+K (Windows/Linux) or Cmd+K (Mac)
+            if ((e.ctrlKey || e.metaKey) && e.key === "k") {
+              e.preventDefault();
+
+              // Find the search input
+              const searchInput = document.querySelector(
+                'input[type="search"]'
+              );
+              if (searchInput) {
+                searchInput.focus();
+                searchInput.select();
+              }
+            }
+          });
+        }, 1000);
+      });
+    </script>
+  </body>
+</html>
