@@ -72,6 +72,4 @@ docs/
 ## Próximos passos
 
 - Customize o tema
-- Adicione mais páginas
 - Configure plugins adicionais
-- Configure deploy (GitHub Pages, Netlify, etc.)

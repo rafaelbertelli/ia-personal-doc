@@ -15,3 +15,7 @@ npm run dev
 ```
 
 Access [http://localhost:3000](http://localhost:3000) in your browser to see the result.
+
+## Documentation
+
+[Documentation](https://rafaelbertelli.github.io/ia-personal-doc/)
